@@ -1,0 +1,66 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% include 'chain.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+<header style="width:54%;min-width:435px;margin:auto;position:sticky;z-index:100;top:0;">
+
+    <button  class="bt btn-sm" onclick="darkmode()" style="float:right;position:relative;top:40px;">
+                <span id="something"><i class="bi bi-moon-fill"></i></span>
+
+    </button>
+
+</header>
+
+<div class="header2" style="height:200px;width:54%;min-width:430px;margin:auto;"></div>
+
+
+<div>
+
+
+<div class="context" style="width:auto;min-width:320px;">
+
+
+<center>
+        <h2 style="display:inline;font-family:;"><b>KaungKaung</b></h2>
+    <label>(4T)</label>
+
+    <br><br><br>
+
+                        <ul class="nav justify-content-center" style="font-size:15.1px;">
+                  <li class="nav-item">
+                    <a class="animation2 na btn btn-sm btn-outline-primary " aria-current="page" href="/">About</a>
+                  </li>&nbsp; &nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="animation2 na btn btn-sm  btn-outline-primary " href="/skill">Skills</a>
+                  </li>&nbsp; &nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="animation2 na btn btn-sm  btn-outline-primary " href="/project">Projects</a>
+                  </li>&nbsp; &nbsp;&nbsp;
+                  <li class="nav-item">
+                    <a class="animation2 na btn btn-sm  btn-outline-primary " href="/education">Education</a>
+                  </li>
+                </ul>
+                    <br><br>
+                    <p style="font-size:15.1px;">Hello! <a class="btn btn-sm btn-success" href="/#contact">Contact</a>
+                        &nbsp;<a href="">Source <i class="bi bi-github" style="font-size: 19px;"></i></a>
+                    </p>
+                    <span class="animation3" style="font-size: 25px;">😊</span>
+</center>
+</div>
+
+
+
+</div>
+
+
+
+<script src="{% static 'darkmode.js' %}">
+
+</script>
+
+{% endblock %}

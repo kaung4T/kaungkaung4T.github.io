@@ -1,0 +1,260 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css");
+
+.context {
+    margin: auto;
+    width: 70%;
+}
+
+
+.darkmode {
+    background-color: #18191a;
+    color:#DFCFBE;
+}
+
+.darkmode label {
+    color:#DFCFBE;
+}
+
+.darkmode .bt {
+    background-color:green;
+}
+.darkmode .bt:hover{
+    background-color:yellow;
+    color: black;
+}
+
+.darkmode .na {
+    color:white;
+}
+
+.darkmode .word {
+    color:#BDBDBD;
+}
+
+.darkmode b {
+    color:#DFCFBE;
+}
+
+.darkmode .border-bottom {
+    border-bottom:1px solid #fff!important;
+}
+
+.darkmode a {
+    color:#DFCFBE;
+    transition: 0.3s;
+}
+
+.darkmode a:hover {
+    color:#DFCFBE;
+}
+
+.darkmode .plink{
+    color:#0d6efd;
+}
+
+.darkmode .plink:hover{
+    color:#0d6efd;
+}
+
+.bt {
+    color:white;
+    background-color:#18191a;
+    border-radius: 17%;
+    transition: 0.3s;
+    border: none;
+    padding: 5px 11px;
+}
+
+.bt:hover{
+    background-color: blue;
+    color: #fff;
+}
+
+.na{
+    color:black;
+    /*padding: 8px 16px;*/
+}
+
+.image{
+    min-width:50px;
+    height:90px;
+    object-fit: cover;
+    border-radius: 47%;
+    margin-left: 10px;
+    margin-bottom:10px;
+    position: relative;
+    top: 48px;
+}
+
+body{
+    /*background-color:#F5F5F5;#EFE1CE;#F0EDE5;#FAEBD7;*/
+    background-color:#F0EDE5;
+    margin: 0px auto;
+    font-family:;
+/*    min-width:500px;*/
+}
+
+
+.word {
+    color:#757575;
+}
+
+.project_image1{
+    border-radius: 2.4%;
+    float:left;
+    max-width:250px;
+    max-height:130px;
+
+    margin-bottom:10px;
+    object-fit:cover;
+    margin-right:11px;
+    transition: .3s ease-in-out;
+}
+
+.project_image1:hover{
+    transform: scale(1.1);
+}
+
+
+
+.project_image2{
+    border-radius: 2.4%;
+    float:right;
+    max-width:250px;
+    max-height:130px;
+
+    margin-bottom:10px;
+    object-fit:cover;
+    margin-left:11px;
+    transition: .3s ease-in-out;
+}
+
+.project_image2:hover{
+    transform: scale(1.1);
+}
+
+
+a{
+    color:black;
+    text-decoration:none;
+}
+a:hover {
+    color:black;
+}
+
+
+.plink {
+    color:#0d6efd;
+}
+
+.plink:hover{
+    color:#0d6efd;
+}
+
+
+img{
+    transition: .3s ease-in-out;
+
+}
+
+img:hover{
+    transform: scale(1.1);
+
+}
+
+
+.about {
+    animation: transition 1.00s;
+}
+
+
+@keyframes transition {
+/*    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }*/
+    from {
+        opacity: 0;
+/*        transform: rotateX(-18deg);*/
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+/*        transform: rotateX(0);*/
+        transform: translateY(0);
+    }
+
+}
+
+.about2{
+    animation: transition2 2s;
+}
+
+@keyframes transition2 {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+}
+
+
+.animation {
+    transition: .3s;
+}
+
+.animation:hover {
+    transform: scale(0.9);
+}
+
+
+.animation2 {
+    transition: .3s;
+}
+
+.animation2:hover {
+     transform: translateY(-5px);
+}
+
+
+.animation3 {
+
+  animation-name: ;
+  animation-direction: alternate;
+  animation-name: slidein;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -80px;
+    width: 150px;
+  }
+
+  to {
+    margin-left: 80px;
+
+    width: 100px;
+  }
+}
+
+.animation4 {
+    transition: .3s;
+}
+
+.animation4:hover {
+    transform: scale(1.05);
+}
+
+
+ html {
+      scroll-behavior: smooth;
+    }
+
+

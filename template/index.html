@@ -1,0 +1,130 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% include 'chain.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% include 'profile.html' %}
+<div style="height:40px;"></div>
+
+<html>
+<body>
+
+            {% for about in About %}
+    <div class="context" style="width:48%;font-size:15.1px;">
+
+
+        <div class="about" style="margin:auto;max-width:590px;">
+        {% for mes in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>{{ mes }}!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+                {% endfor %}
+        </div>
+
+        <div class="context" style="width:48%;font-size:15.1px;">
+        <div class="about2 animation4" style="margin:auto;max-width:590px;font-family:Comic Sans MS;">
+    <p> <b>{{ about.about|truncatewords:15 }}</b> </p>
+        </div>
+        </div>
+        <br><br>
+
+
+<div class="about" style="float:right;width:112px;height:140px;">
+    <img class="image" src="{{ about.user.image.url }}" alt="">
+        </div>
+
+    <div class="about" style="margin:auto;max-width:590px;">
+            <h5>About Me</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+
+        <p style="font-size:15.1px;line-height: 25.7px;">
+
+            {{ about.about }}
+
+            <br><br>
+            {{ about.conclusion }}
+        </p>
+    </div>
+        <br>
+
+
+        <div class="about" style="font-size:15.1px;margin:auto;max-width:590px;">
+        <h5>Details</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+                                <!--line-height: 22.7px;-->
+            <ul class="nav flex-column" style="line-height: 27.7px;">
+        <li class="nav-item"><b>Date of Birth</b> {{about.dob}} <i class="bi bi-calendar2-event-fill"></i></li>
+                       <li class="nav-item"><b>nationality</b> {{about.nation}} <i class="bi bi-globe"></i></li>
+                     <li class="nav-item"><b>Phone</b> {{about.phone}} <i class="bi bi-telephone-fill"></i></li>
+                   <li class="nav-item"><b>Profession</b> {{about.profession}} <i class="bi bi-person-workspace"></i></li>
+                <li class="nav-item"><b>Graduate</b> {{about.graduate}} <i class="bi bi-mortarboard-fill"></i></li>
+              <li class="nav-item"><b>Email</b> {{about.email}} <i class="bi bi-envelope-fill"></i></li>
+            </ul>
+            <div style="height:43.5px;"></div>
+
+
+
+            <h5>Links</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+                    <ul class="nav flex-column" style="line-height: 27.7px;">
+        <li class="nav-item"><b>Github </b><a class="plink" href="{{about.github}}" target="_blank">@kaungkaung4T</a></li>
+                       <li class="nav-item"><b>Leetcode </b><a class="plink" href="{{about.leet}}" target="_blank">@KaungKaung</a></li>
+                     <li class="nav-item"><b>LinkedIn </b><a class="plink" href="{{about.linked}}" target="_blank">@kaungmin-khant</a></li>
+            </ul>
+        </div>
+
+
+
+
+        <div id="contact" class="about2" style="font-size:15.1px;margin:auto;max-width:590px;margin-top:63px;">
+            <h5>Contact</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend><br>
+                        <div id="div">
+            </div>
+            <form id="form" method="POST" action="{% url 'index' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="mb-3">
+                        <div class="col-sm-10">
+                <label class="form-label">Email address</label>
+      <input type="email" class="form-control" placeholder="name@gmail.com" name="email" id="email" required></div>
+                    </div>
+
+                <div class="mb-3">
+                        <div class="col-sm-10">
+                            <label class="form-label">Title</label>
+      <input type="text" class="form-control" name="title" id="title" required></div>
+                    </div>
+
+        <div class="mb-3">
+          <div class="col-sm-10">
+              <label class="form-label">Text</label>
+              <textarea class="form-control" rows="3" name="text" id="text" required></textarea></div>
+                </div>
+
+                <div class="col-sm-10">
+        <button type="submit" class="animation2 na btn btn-sm btn-outline-primary mb-3">Send</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+                {% endfor %}
+</body>
+
+<!--<script src="{% static 'contactjquery.js' %}">
+
+</script>-->
+
+
+<footer style="height:200px;"></footer>
+</html>
+
+{% endblock %}

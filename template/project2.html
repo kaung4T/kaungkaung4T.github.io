@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% include 'chain.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% include 'profile.html' %}
+<div style="height:40px;"></div>
+
+<body>
+
+<div class="context" style="width:48%;">
+
+        <div class="about" style="margin:auto;max-width:590px;">
+
+
+            <div style="margin:auto;font-size:15.1px;">
+
+        {% if project.title == "Secure Coding" %}
+                  <h5>{{project.title}}</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:160px;"></legend>
+                {% else %}
+            <h5>{{project.title}}</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+            {% endif %}
+
+        <p style="white-space: pre-line;">{{ project.description }}
+
+            <label>Uses: <b>{{ project.uses }}</b></label>{% if project.url %}
+            <label>Host: <a class="plink" target="_blank" href="{{ project.url }}">{{ project.url }}</a></label>{% else %}
+            <label>Host: Unavailable</label>{% endif %}{% if project.source_code %}
+            <label>SouceCode: <a class="plink" href="{{ project.source_code }}">{{ project.source_code }}</a></label>{% else %}
+            <label>Source: private</label>{% endif %}
+            </p><br>
+
+                <div class="row" style="max-width:590px;">
+                <img src="{{project.image2.url}}" style="margin-bottom:10px;margin-right:-7px;max-width:300px;max-height:180px;object-fit:cover;border-radius: 5.7%;">
+                        <img src="{{project.image3.url}}" style="margin-bottom:10px;margin-right:-7px;max-width:300px;max-height:180px;object-fit:cover;border-radius:  5.7%;">
+                    <img src="{{project.image.url}}" style="margin-bottom:10px;margin-right:-7px;max-width:300px;max-height:180px;object-fit:cover;border-radius:  5.7%;">
+                        <img src="{{project.image4.url}}" style="margin-bottom:10px;margin-right:-7px;max-width:300px;max-height:180px;object-fit:cover;border-radius:  5.7%;">
+                    </div>
+
+<!--            <img src="{{project.image2.url}}" alt="" style="margin-bottom:10px;float:left;max-width:287px;max-height:180px;object-fit:cover;border-radius: 2.4%;">
+            <img src="{{project.image3.url}}" alt="" style="margin-bottom:10px;float:right;max-width:287px;max-height:180px;object-fit:cover;border-radius: 2.4%;">
+            <div style="height:194px;"></div>
+            <img src="{{project.image.url}}" alt="" style="margin-bottom:10px;float:left;max-width:287px;max-height:180px;object-fit:cover;border-radius: 2.4%;">
+            <img src="{{project.image4.url}}" alt="" style="margin-bottom:10px;float:right;max-width:287px;max-height:180px;object-fit:cover;border-radius: 2.4%;">-->
+
+
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+<footer style="height:180px;"></footer>
+
+{% endblock %}

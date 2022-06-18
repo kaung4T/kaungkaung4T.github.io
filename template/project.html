@@ -1,0 +1,106 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% include 'chain.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% include 'profile.html' %}
+<div style="height:40px;"></div>
+
+<body>
+
+<div class="context" style="width:48%;">
+
+    <div class="about" style="margin:auto;max-width:590px;">
+        <h5>Personal Projects</h5>
+            <legend class="border-bottom border-dark mb-3" style="width:160px;"></legend>
+        <br><br>
+
+<!--            <div class="row" style="background-color:;">-->
+                        {% for projects in project %}
+<!--                        <div class="col">-->
+
+        {% if projects.title == 'Secure Coding' %}
+                             <h5>School Projects</h5>
+            <legend class="border-bottom border-dark mb-3" style="width:160px;"></legend>
+            <br><br>
+                        {% endif %}
+
+        <div class="animation" style="margin:auto;min-width:229px;font-size:15.1px;">
+
+                     {% if projects.title == '雨点' or projects.title == 'Secure Coding' %}
+
+            <a href="{% url 'project2' projects.id %}">
+                <img class="project_image2" src="{{ projects.image.url }}" alt="" style=""></a>
+
+
+            <div style="">
+                    <center>
+
+            <a href="{% url 'project2' projects.id %}" style="text-decoration:none;">
+                {% if projects.title == 'Secure Coding' %}
+            <b>{{ projects.title }}</b><span style="font-size:13px;">{{ projects.schoolp }}</span>
+                            {% else %}
+                <b>{{ projects.title }}</b>
+                {% endif %}
+
+                    <p>{{ projects.description|truncatechars:110 }}</p>
+            </a>
+                        {% if projects.title == '雨点' or projects.title == 'Secure Coding' %}
+                        {% if projects.url %}
+                    <a class="btn btn-danger btn-sm" href="{{ projects.url }}" target="_blank">Live</a>
+                        {% endif %}
+                            {% endif %}
+
+                    </center>
+                    </div>
+            
+                            {% else %}
+            <a href="{% url 'project2' projects.id %}" >
+                <img class="project_image1" src="{{ projects.image.url }}" alt="" style=""></a>
+
+
+            <div style="">
+                    <center>
+
+                <a href="{% url 'project2' projects.id %}" style="text-decoration:none;">
+
+            {% if projects.title == 'COMX' %}
+            <b>{{ projects.title }}</b><span style="font-size:13px;">{{ projects.schoolp }}</span>
+                            {% else %}
+                <b>{{ projects.title }}</b>
+                {% endif %}
+
+                    <p>{{ projects.description|truncatechars:110 }}</p></a>
+
+                            {% if projects.url %}
+                    <a class="btn btn-danger btn-sm" href="{{ projects.url }}" target="_blank">Live</a>
+                            {% endif %}
+
+                    </center>
+                    </div>
+
+                    {% endif %}
+            
+
+            
+            
+                    <br><br><br>
+            </div>
+
+<!--                        </div>-->
+                {% endfor %}
+<!--                </div>-->
+
+    </div>
+
+</div>
+
+</body>
+
+
+<footer style="height:200px;"></footer>
+
+{% endblock %}

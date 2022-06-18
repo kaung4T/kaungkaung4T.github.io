@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% include 'chain.html' %}
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+{% include 'profile.html' %}
+<div style="height:40px;"></div>
+
+<body>
+
+<div class="context" style="width:48%;">
+     <div class="about" style="margin:auto;max-width:590px;font-size:15.1px;">
+
+         <h5>Education</h5>
+        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+                {% for educations in education %}
+         <p style="white-space: pre-line;"><b>{{ educations.name }}</b>
+                    {{ educations.description }}
+                    Date of Award: {{ educations.date }}
+                {% endfor %}
+             <b>For level 7 and 8</b>
+             Be able to specialise in a range of areas such as forensic computing, cyber security and etc.
+             </p>
+
+                    <!--matplotlib-->
+<!--         <img src="data:image/png;base64,{{ a }}" alt="" style="width:480px;height:400px;">-->
+
+</div>
+</div>
+    </body>
+
+
+<footer style="height:200px;"></footer>
+
+{% endblock %}
