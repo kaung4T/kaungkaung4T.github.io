@@ -258,3 +258,6 @@ animation-iteration-count: infinite;
     }
 
 
+.box1 {
+  box-shadow: 0px 5px 10px 10px rgba(0,255,255,0.7);
+}
