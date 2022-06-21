@@ -1,4 +1,3 @@
-permalink: template/index.html
 
 # Portfolio
 
