@@ -10,7 +10,7 @@ from display.models import Education
 
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate"]
+    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url"]
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = [
