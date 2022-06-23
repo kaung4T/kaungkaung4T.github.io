@@ -23,7 +23,7 @@ class SkillAdmin(admin.ModelAdmin):
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ["title", "image", "uses", "description", "schoolp", "url", "source_code", "image2", "image3", "image4"]
+    list_display = ["title", "image", "uses", "description", "schoolp", "url", "source_code", "image2", "image3", "image4", "date"]
 
 
 class SchoolProjectAdmin(admin.ModelAdmin):

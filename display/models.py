@@ -47,6 +47,7 @@ class Project(models.Model):
     image2 = models.ImageField(upload_to='project_image', null=True, blank=True)
     image3 = models.ImageField(upload_to='project_image', null=True, blank=True)
     image4 = models.ImageField(upload_to='project_image', null=True, blank=True)
+    date = models.CharField(null=True, blank=True, max_length=255)
 
 class SchoolProject(models.Model):
     title = models.CharField(max_length=225)
