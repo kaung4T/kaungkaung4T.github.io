@@ -22,12 +22,12 @@
 
         {% if project.title == "Secure Coding" %}
                   <h5><b>{{project.title}}</b></h5>
-        <legend class="border-bottom border-dark mb-3" style="width:160px;"></legend>
+        <legend class="border-bottom border-dark mb-1" style="width:160px;"></legend>
                 {% else %}
             <h5><b>{{project.title}}</b></h5>
-        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+        <legend class="border-bottom border-dark mb-1" style="width:100px;"></legend>
             {% endif %}
-
+        <p class="word">{{ project.date }}</p>
         <p style="white-space: pre-line;">{{ project.description }}
 
             <label>Uses: <b>{{ project.uses }}</b></label>{% if project.url %}
