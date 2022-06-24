@@ -31,7 +31,7 @@ class SchoolProjectAdmin(admin.ModelAdmin):
 
 
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ["name", "description", "date"]
+    list_display = ["name", "description", "date", "total_date"]
 
 
 admin.site.register(Profile)

@@ -61,4 +61,4 @@ class Education(models.Model):
     name = models.CharField(max_length=225)
     description = models.TextField()
     date = models.CharField(max_length=225)
-
+    total_date = models.CharField(max_length=225, null=True, blank=True)

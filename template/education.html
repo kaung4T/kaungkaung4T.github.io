@@ -17,8 +17,11 @@
      <div class="about" style="margin:auto;max-width:590px;font-size:15.1px;">
 
          <h5><b>Education</b></h5>
-        <legend class="border-bottom border-dark mb-3" style="width:100px;"></legend>
+        <legend class="border-bottom border-dark mb-1" style="width:100px;"></legend>
                 {% for educations in education %}
+         {% if educations.total_date %}
+         <p class="word">{{ educations.total_date }}</p>
+         {% endif %}
          <p style="white-space: pre-line;"><b>{{ educations.name }}</b>
                     {{ educations.description }}
                     Date of Award: {{ educations.date }}
