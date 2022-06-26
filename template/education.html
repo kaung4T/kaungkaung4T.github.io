@@ -32,9 +32,22 @@
 
                     <!--matplotlib-->
 <!--         <img src="data:image/png;base64,{{ a }}" alt="" style="width:480px;height:400px;">-->
-
+         <br>
          <div class="row">
+            {% for education in edu %}
 
+
+             <div style="width:200px;margin-bottom:22px;">
+                 <a style="text-decoration:none;" href="{{education.url}}" target="_blank">
+             <img src="{{ education.image.url }}" alt="" style="width:170px;height:170px;margin-bottom:8px;border-radius:5.7%;">
+             <center><p>{{ education.title }}</p>
+       <a target="_blank" class="animation2 na btn btn-sm btn-outline-primary mb-3" href="{{education.url}}">View</a>
+             </center>
+                     </a>
+                 </div>
+
+
+             {% endfor %}
          </div>
 </div>
 </div>

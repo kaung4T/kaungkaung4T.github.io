@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from display.models import About
-from display.models import Skill, Project, SchoolProject, Education
+from display.models import Skill, Project, SchoolProject, Education, Education_tran
 from display.models import Project
 from display.models import SchoolProject
 from display.models import Education
@@ -11,6 +11,7 @@ import urllib, base64
 from django.core.mail import EmailMessage, send_mail
 from django.contrib import messages
 from django.http import JsonResponse
+from display.models import Education_tran
 
 # Create your views here.
 def home(request):
@@ -60,6 +61,7 @@ def project2(request, pk):
 def education(request):
 
     e = Education.objects.all()
+    edu = Education_tran.objects.all()
     # a = ["Level 3", "Level 4", "Level 5", "Level 6"]
     # year1 = [1, 4, 7, 9]
     # year2 = [2, 5, 8, 13]
@@ -87,7 +89,7 @@ def education(request):
     # uri = urllib.parse.quote(text)
 
     return render(request, "education.html",
-                  {"education":e})
+                  {"education":e, "edu":edu})
 
 
 

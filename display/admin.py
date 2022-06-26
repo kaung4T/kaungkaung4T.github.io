@@ -36,7 +36,7 @@ class EducationAdmin(admin.ModelAdmin):
 
 
 class Education_tranAdmin(admin.ModelAdmin):
-    list_display = ["image", "title", "url"]
+    list_display = ["title", "image", "url"]
 
 admin.site.register(Profile)
 admin.site.register(About, AboutAdmin)
