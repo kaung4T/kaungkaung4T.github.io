@@ -2,10 +2,11 @@ from django.contrib import admin
 from display.models import Profile
 from django.contrib.auth.admin import UserAdmin
 from display.models import About
-from display.models import Skill, Project, SchoolProject, Education
+from display.models import Skill, Project, SchoolProject, Education, Education_tran
 from display.models import Project
 from display.models import SchoolProject
 from display.models import Education
+from display.models import Education_tran
 # Register your models here.
 
 
@@ -31,8 +32,11 @@ class SchoolProjectAdmin(admin.ModelAdmin):
 
 
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ["name", "description", "date", "total_date"]
+    list_display = ["name", "description", "date", "total_date", "gpa"]
 
+
+class Education_tranAdmin(admin.ModelAdmin):
+    list_display = ["image", "title", "url"]
 
 admin.site.register(Profile)
 admin.site.register(About, AboutAdmin)
@@ -40,3 +44,4 @@ admin.site.register(Skill, SkillAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(SchoolProject, SchoolProjectAdmin)
 admin.site.register(Education, EducationAdmin)
+admin.site.register(Education_tran, Education_tranAdmin)

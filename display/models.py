@@ -62,3 +62,9 @@ class Education(models.Model):
     description = models.TextField()
     date = models.CharField(max_length=225)
     total_date = models.CharField(max_length=225, null=True, blank=True)
+    gpa = models.CharField(max_length=225, null=True, blank=True)
+
+class Education_tran(models.Model):
+    image = models.ImageField(upload_to='education_image')
+    title = models.CharField(max_length=225, null=True, blank=True)
+    url = models.URLField(null=True, blank=True)
