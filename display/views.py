@@ -92,6 +92,3 @@ def education(request):
                   {"education":e, "edu":edu})
 
 
-
-# https://mediaabox.herokuapp.com/
-# https://www.behance.net/gallery/105006699/CT6014-COMX?tracking_source=search_projects%7Ccomx%20ct6014
