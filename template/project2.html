@@ -33,7 +33,7 @@
             <label>Uses: <b>{{ project.uses }}</b></label>{% if project.url %}
             <label>Host: <a class="plink" target="_blank" href="{{ project.url }}">{{ project.url }}</a></label>{% else %}
             <label>Host: Unavailable</label>{% endif %}{% if project.source_code %}
-            <label>SouceCode: <a class="plink" href="{{ project.source_code }}">{{ project.source_code }}</a></label>{% else %}
+            <label>SouceCode: <a class="plink" href="{{ project.source_code }}" target="_blank">{{ project.source_code }}</a></label>{% else %}
             <label>Source: private</label>{% endif %}
             </p><br>
 
