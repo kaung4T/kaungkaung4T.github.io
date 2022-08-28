@@ -63,6 +63,7 @@ class Education(models.Model):
     date = models.CharField(max_length=225)
     total_date = models.CharField(max_length=225, null=True, blank=True)
     gpa = models.CharField(max_length=225, null=True, blank=True)
+    major = models.CharField(max_length=225, null=True, blank=True)
 
 class Education_tran(models.Model):
     image = models.ImageField(upload_to='education_image')

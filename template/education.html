@@ -25,6 +25,7 @@
          <p style="white-space: pre-line;"><b>{{ educations.name }}</b>
                     {{ educations.description }}
                     Date of Award: {{ educations.date }}{% if educations.gpa %}
+                    <b>Major</b>: {{ educations.major }}
                     <b>GPA</b>: {{ educations.gpa }}{% endif %}{% endfor %}
              <b>For level 7 and 8</b>
              Be able to specialise in a range of areas such as forensic computing, cyber security and etc.
