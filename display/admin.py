@@ -11,7 +11,7 @@ from display.models import Education_tran
 
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url"]
+    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url", "work"]
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = [
