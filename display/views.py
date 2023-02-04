@@ -17,9 +17,14 @@ from display.models import Education_tran
 
 
 def work(request):
-    h = "hello"
+
+    context = {
+        "name": "kaung",
+        "age" : 22
+    }
+
     return render(request, "work.html",
-                    {"h":h})
+                    {"context":context})
 
 
 def home(request):

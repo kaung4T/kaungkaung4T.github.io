@@ -8,6 +8,7 @@ class Profile(AbstractUser):
 
 
 
+
 class About(models.Model):
     user = models.ForeignKey(Profile, default=None, on_delete=models.CASCADE)
     about = models.TextField()
