@@ -7,11 +7,22 @@ from display.models import Project
 from display.models import SchoolProject
 from display.models import Education
 from display.models import Education_tran
+from display.models import Work, Work_project
 # Register your models here.
+
+
+class workAdmin(admin.ModelAdmin):
+    list_display = ["user", "title", "description", "date", "url", "image"]
+
+
+class WorkProjectAdmin(admin.ModelAdmin):
+    list_display = ["user", "title", "description", "date", "url", "image1", "image2", "image3", "image4"]
+
 
 
 class AboutAdmin(admin.ModelAdmin):
     list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url", "work", "work_url"]
+
 
 class SkillAdmin(admin.ModelAdmin):
     list_display = [
@@ -45,3 +56,5 @@ admin.site.register(Project, ProjectAdmin)
 admin.site.register(SchoolProject, SchoolProjectAdmin)
 admin.site.register(Education, EducationAdmin)
 admin.site.register(Education_tran, Education_tranAdmin)
+admin.site.register(Work, workAdmin)
+admin.site.register(Work_project, WorkProjectAdmin)
