@@ -14,6 +14,14 @@ from django.http import JsonResponse
 from display.models import Education_tran
 
 # Create your views here.
+
+
+def work(request):
+    h = "hello"
+    return render(request, "work.html",
+                    {"h":h})
+
+
 def home(request):
     about = About.objects.all()
     if request.method == "POST":

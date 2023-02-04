@@ -8,4 +8,5 @@ urlpatterns = [
     path("project", views.project, name="project"),
     path("project2/<str:pk>", views.project2, name="project2"),
     path("education", views.education, name="education"),
+    path("work", views.work, name="work"),
 ]
