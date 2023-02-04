@@ -7,6 +7,8 @@ class Profile(AbstractUser):
     image = models.ImageField(upload_to='media')
 
 
+class Work(models.Model):
+    User = models.ForeignKey(Profile, default=None, on_delete=models.CASCADE)
 
 
 class About(models.Model):
