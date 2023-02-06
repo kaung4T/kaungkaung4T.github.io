@@ -20,14 +20,15 @@
                 {% for works in context.work %}
 
                 
-                    <h5 style="font-weight: bold;">{{ works.title }}</h5>
-                    <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
-                    <p><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {{ works.end_date }}</p>
-                    
-                
+                <h5 style="font-weight: bold;">{{ works.title }}</h5>
+                <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
 
 
-                    <div>
+    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {{ works.end_date }}
+    <span style="font-weight: bold;">Role:</span> {{ works.role }}
+    </p>
+              <br>  
+
                     
 
                         <div class="work_image">

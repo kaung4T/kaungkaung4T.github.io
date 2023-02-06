@@ -12,7 +12,7 @@ from display.models import Work, Work_project
 
 
 class workAdmin(admin.ModelAdmin):
-    list_display = ["user", "title", "description", "tech", "date", "end_date", "url", "image"]
+    list_display = ["user", "title", "role", "description", "tech", "date", "end_date", "url", "image"]
 
 
 class WorkProjectAdmin(admin.ModelAdmin):
