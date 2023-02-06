@@ -301,3 +301,16 @@ animation-iteration-count: infinite;
         float:none;
     }
 }
+
+
+.work_image {
+    float: right;
+}
+
+@media(max-width: 650px){
+    .work_image {
+        float: none;
+        position: relative;
+        right: 15px;
+    }
+}

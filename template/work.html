@@ -21,10 +21,31 @@
                     <h5 style="font-weight: bold;">{{ works.title }}</h5>
                     <legend class="border-bottom border-dark mb-3" style="width:525px;"></legend>
 
-                    <div>
-                        {{ works.description }}
 
-                        <img src="{{ wroks.image.url }}" alt="">
+
+                    <div>
+                    
+
+                        <div class="work_image">
+                            <img src="{{ works.image.url }}" alt="" style="
+                            min-width: 240px; height:200px;margin-left: 15px;margin-bottom: 15px;">
+                            </div>
+
+
+
+
+                        <div style="width: 100%;">
+                        <p>
+                        {{ works.description }}
+                        </p>
+
+                        <p style="margin-top: 30px;">
+                            Technologies that use are: 
+                            <span style="font-weight: bold;">{{ works.tech }}</span>
+                        </p>
+                        </div>
+
+                        
 
                     </div>
 
@@ -34,5 +55,8 @@
 
 </div>
 
+
+
+<footer style="height:200px;"></footer>
 
 {% endblock %}

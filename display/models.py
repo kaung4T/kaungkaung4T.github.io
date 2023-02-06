@@ -11,6 +11,7 @@ class Work(models.Model):
     user = models.ForeignKey(Profile, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=225, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
+    tech = models.CharField(max_length=255, null=True, blank=True)
     date = models.DateField(null=True, blank=True)
     end_date = models.DateField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
