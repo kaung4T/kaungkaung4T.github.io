@@ -12,6 +12,7 @@ class Work(models.Model):
     title = models.CharField(max_length=225, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     date = models.DateField(null=True, blank=True)
+    end_date = models.DateField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to="work")
 
