@@ -16,6 +16,7 @@ class Work(models.Model):
     date = models.DateField(null=True, blank=True)
     end_date = models.DateField(null=True, blank=True)
     url = models.URLField(null=True, blank=True)
+    location = models.URLField(null=True, blank=True)
     image = models.ImageField(upload_to="work")
 
 
