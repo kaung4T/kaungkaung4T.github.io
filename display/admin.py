@@ -16,7 +16,7 @@ class workAdmin(admin.ModelAdmin):
 
 
 class WorkProjectAdmin(admin.ModelAdmin):
-    list_display = ["user", "title", "description", "date", "url", "image1", "image2", "image3", "image4"]
+    list_display = ["user", "title", "description", "tech", "date", "end_date", "url", "uat_url", "image1", "image2", "image3", "image4", "image5"]
 
 
 
