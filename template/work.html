@@ -50,19 +50,47 @@
                         </p>
                         </div>
                         
-<p style="white-space: pre-line;"><span style="font-weight: bold;">Company-Page: </span><a class="plink" href="{{ works.url }}">CUBE Design & SNI</a>
-    <span style="font-weight: bold;">Location: </span><a class="plink" href="{{ works.location }}">Myanmar, Bahan Sayar San, Yangon</a>
+<p style="white-space: pre-line;"><span style="font-weight: bold;">Company-Page: </span><a class="plink" target="_blank" href="{{ works.url }}">CUBE Design & SNI</a>
+    <span style="font-weight: bold;">Location: </span><a class="plink" target="_blank" href="{{ works.location }}">Myanmar, Bahan Sayar San, Yangon</a>
 </p>
                     <br>
                 {% endfor %}
 
 
+                
+
                     <h5 style="font-weight: bold;">Work Projects</h5>
-                    <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
+                    <legend class="border-bottom border-dark mb-4" style="width:525px;"></legend>
+
+                {% for work_projects in context.work_project %}
+
+                <h5 style="font-weight: bold;">{{ work_projects.title}}</h5>
+                <legend class="border-bottom border-dark mb-1" style="width:100px;"></legend>
+
+    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ work_projects.date }} - {{ work_projects.end_date }}
+        <span style="font-weight: bold;">Production:</span> <a class="plink" target="_blank" href="{{ work_projects.url }}">{{ work_projects.url }}</a>
+        <span style="font-weight: bold;">UAT:</span> <a class="plink" target="_blank" href="{{ work_projects.uat_url }}">{{ work_projects.uat_url }}</a>
+    </p>
+
+
+    
+    <a href="">
+    <div style="display: block;">
+        <div class="work_project_img">
+            <img src="{{ work_projects.image1.url }}" alt="" style="
+            width: 300px; height:160px;margin-left: 15px;margin-bottom: 15px;">
+        </div>
+    
+        
+        <div>
+            {{ work_projects.description|truncatewords:35 }}
+        </div>
+    </div>
+</a>
 
 
 
-
+                {% endfor %}
 
 </div>
 

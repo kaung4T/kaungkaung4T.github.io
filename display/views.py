@@ -12,16 +12,18 @@ from django.core.mail import EmailMessage, send_mail
 from django.contrib import messages
 from django.http import JsonResponse
 from display.models import Education_tran
-from display.models import Work
+from display.models import Work, Work_project
 
 # Create your views here.
 
 
 def work(request):
     work = Work.objects.all()
+    work_project = Work_project.objects.all()
 
     context = {
         "work": work,
+        "work_project": work_project,
     }
 
     return render(request, "work.html",

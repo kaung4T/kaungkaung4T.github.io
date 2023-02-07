@@ -314,3 +314,16 @@ animation-iteration-count: infinite;
         right: 15px;
     }
 }
+
+.work_project_img {
+    float: right;
+}
+
+
+@media(max-width: 798px){
+    .work_project_img {
+        float: none;
+        position: relative;
+        right: 15px;
+    }
+}
