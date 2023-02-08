@@ -60,12 +60,12 @@
                 
 
                     <h5 style="font-weight: bold;">Work Projects</h5>
-                    <legend class="border-bottom border-dark mb-4" style="width:525px;"></legend>
+                    <legend class="border-bottom border-dark mb-4" style="width:155px;"></legend>
 
                 {% for work_projects in context.work_project %}
 
                 <h5 style="font-weight: bold;">{{ work_projects.title}}</h5>
-                <legend class="border-bottom border-dark mb-1" style="width:100px;"></legend>
+                <legend class="border-bottom border-dark mb-1" style=""></legend>
 
     <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ work_projects.date }} - {{ work_projects.end_date }}
         <span style="font-weight: bold;">Production:</span> <a class="plink" target="_blank" href="{{ work_projects.url }}">{{ work_projects.url }}</a>
@@ -74,7 +74,7 @@
 
 
     
-    <a href="">
+    <a href="/" style="text-decoration: none;">
     <div style="display: block;">
         <div class="work_project_img">
             <img src="{{ work_projects.image1.url }}" alt="" style="
@@ -83,7 +83,7 @@
     
         
         <div>
-            {{ work_projects.description|truncatewords:35 }}
+            {{ work_projects.description|truncatewords:35 }} <span class="plink">More</span>
         </div>
     </div>
 </a>
