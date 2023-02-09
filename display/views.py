@@ -17,6 +17,10 @@ from display.models import Work, Work_project
 # Create your views here.
 
 
+def double_project(request):
+    return render(request, "projects.html")
+
+
 def work(request):
     work = Work.objects.all()
     work_project = Work_project.objects.all()
