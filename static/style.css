@@ -86,6 +86,7 @@
 
 body{
     /*background-color:#F5F5F5;#EFE1CE;#F0EDE5;#FAEBD7;*/
+    min-width: 279px;
     background-color:#F0EDE5;
     margin: 0px auto;
     font-family: Tahoma,Verdana,Segoe,sans-serif;
@@ -325,5 +326,17 @@ animation-iteration-count: infinite;
         float: none;
         position: relative;
         right: 15px;
+    }
+}
+
+
+.new_box {
+    height:1px;border-radius: 50%;margin:auto;max-width:290px;
+}
+
+
+@media(max-width:360px){
+    .new_box {
+        margin-left: 35px;
     }
 }
