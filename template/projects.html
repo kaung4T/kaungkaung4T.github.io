@@ -144,28 +144,52 @@
     </div>
 </div>
 
+
 <script>
     let work_project = document.querySelector("#work_project");
     let personal_project = document.querySelector("#personal_project");
 
     let work_project_body = document.querySelector(".work_project_body");
     let personal_project_body = document.querySelector(".personal_project_body");
-    let opacity = 0;
+    
 
     work_project.addEventListener("click", function fun (){
+        let opacity = 0;
         personal_project_body.style.display = "none";
         work_project_body.style.display = "block";
+        
+        setInterval (
+            function ff (){
+        if (opacity < 1) {
+            opacity = opacity + 0.1;
+            work_project_body.style.opacity = opacity;
+            console.log(opacity);
+        }
+        }, 10);
+
 
     });
-
-
+    
+    
     personal_project.addEventListener("click", function fun2 (){
+        let opacity = 0;    
+        
         work_project_body.style.display = "none";
         personal_project_body.style.display = "block";
+
+        setInterval (
+            function ff2 (){
+        if (opacity < 1) {
+            opacity = opacity + 0.1;
+            personal_project_body.style.opacity = opacity;
+            
+        }
+        }, 10);
 
     });
 
 </script>
+
 
 
 <footer style="height:150px;"></footer>
