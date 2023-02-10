@@ -18,7 +18,14 @@ from display.models import Work, Work_project
 
 
 def double_project(request):
-    return render(request, "projects.html")
+    work_project = Work_project.objects.all()
+    personal_project = Project.objects.all()
+    context = {
+        "work_project": work_project,
+        "personal_project": personal_project
+    }
+    return render(request, "projects.html",
+                    {"context":context})
 
 
 def work(request):

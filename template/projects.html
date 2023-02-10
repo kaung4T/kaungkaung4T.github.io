@@ -18,13 +18,125 @@
         <div style="display:flex;margin:auto;max-width:350px;min-width:170px;font-size:15.1px;justify-content: center;">
 
             
-            <a href="" class="pro1 animation2 btn btn btn-outline-info" style="margin-right: 20px;height: 60px;padding: 15px;">
-                Work Projects</a>
+            <div id="work_project" href="" class="pro1 animation2 na btn btn-outline-info" style="margin-right: 20px;height: 60px;padding: 15px;">
+                Work Projects</div>
             
-            <a href="" class="pro1 animation2 btn btn btn-outline-info" style="height: 60px;padding: 15px;">
-                Personal Projects</a>
+            <div id="personal_project" href="" class="pro1 animation2 na btn btn-outline-info" style="height: 60px;padding: 15px;">
+                Personal Projects</div>
         </div>
+<br>
+<br>
 
+        
+
+<div class="work_project_body">
+<h4 style="font-weight: bold;">Work Projects</h4>
+<legend class="border-bottom border-dark mb-3" style="width: 180px;"></legend>
+        {% for work_projects in context.work_project %}
+
+        <h5 style="font-weight: bold;">{{ work_projects.title}}</h5>
+        <legend class="border-bottom border-dark mb-1" style=""></legend>
+
+<p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ work_projects.date }} - {{ work_projects.end_date }}
+<span style="font-weight: bold;">Production:</span> <a class="plink" target="_blank" href="{{ work_projects.url }}">{{ work_projects.url }}</a>
+<span style="font-weight: bold;">UAT:</span> <a class="plink" target="_blank" href="{{ work_projects.uat_url }}">{{ work_projects.uat_url }}</a>
+</p>
+
+
+
+<a href="/" style="text-decoration: none;">
+<div style="display: block;">
+<div class="work_project_img">
+    <img src="{{ work_projects.image1.url }}" alt="" style="
+    width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+</div>
+
+
+<div>
+    {{ work_projects.description|truncatewords:35 }} <span class="plink">More</span>
+</div>
+</div>
+</a>
+
+<div style="height: 80px;"></div>
+        {% endfor %}
+</div>
+
+
+
+<div class="personal_project_body" style="display: none;">
+    
+    <h4 style="font-weight: bold;">Personal Projects</h4>
+    <legend class="border-bottom border-dark mb-3" style="width: 220px;"></legend>
+
+        {% for projects in context.personal_project %}
+
+        {% if projects.title == 'Secure Coding' %}
+                             <h5><b>School Projects</b></h5>
+            <legend class="border-bottom border-dark mb-3" style="width:160px;"></legend>
+            <br><br>
+                        {% endif %}
+
+        <div class="animation" style="margin:auto;min-width:229px;font-size:15.1px;">
+
+                     {% if projects.title == '雨点' or projects.title == 'Secure Coding' %}
+
+            <a href="{% url 'project2' projects.id %}">
+                <img class="project_image2" src="{{ projects.image.url }}" alt="" style=""></a>
+
+
+            <div style="">
+                    <center>
+
+            <a href="{% url 'project2' projects.id %}" style="text-decoration:none;">
+                {% if projects.title == 'Secure Coding' %}
+            <b>{{ projects.title }}</b><span style="font-size:13px;">{{ projects.schoolp }}</span>
+                            {% else %}
+                <b>{{ projects.title }}</b>
+                {% endif %}
+
+                    <p>{{ projects.description|truncatechars:110 }}</p>
+            </a>
+                        {% if projects.title == '雨点' or projects.title == 'Secure Coding' %}
+                        {% if projects.url %}
+                    <a class="btn btn-danger btn-sm" href="{{ projects.url }}" target="_blank">Live</a>
+                        {% endif %}
+                            {% endif %}
+
+                    </center>
+                    </div>
+            
+                            {% else %}
+            <a href="{% url 'project2' projects.id %}" >
+                <img class="project_image1" src="{{ projects.image.url }}" alt="" style=""></a>
+
+
+            <div style="">
+                    <center>
+
+                <a href="{% url 'project2' projects.id %}" style="text-decoration:none;">
+
+            {% if projects.title == 'COMX' %}
+            <b>{{ projects.title }}</b><span style="font-size:13px;">{{ projects.schoolp }}</span>
+                            {% else %}
+                <b>{{ projects.title }}</b>
+                {% endif %}
+
+                    <p>{{ projects.description|truncatechars:110 }}</p></a>
+
+                            {% if projects.url %}
+                    <a class="btn btn-danger btn-sm" href="{{ projects.url }}" target="_blank">Live</a>
+                            {% endif %}
+
+                    </center>
+                    </div>
+
+                    {% endif %}
+            
+                    <br><br><br>
+            </div>
+                {% endfor %}
+            </div>
 
 
 
@@ -32,7 +144,28 @@
     </div>
 </div>
 
+<script>
+    let work_project = document.querySelector("#work_project");
+    let personal_project = document.querySelector("#personal_project");
 
+    let work_project_body = document.querySelector(".work_project_body");
+    let personal_project_body = document.querySelector(".personal_project_body");
+    let opacity = 0;
+
+    work_project.addEventListener("click", function fun (){
+        personal_project_body.style.display = "none";
+        work_project_body.style.display = "block";
+        work_project_body.style.background;
+    });
+
+
+    personal_project.addEventListener("click", function fun2 (){
+        work_project_body.style.display = "none";
+        personal_project_body.style.display = "block";
+
+    });
+
+</script>
 
 
 <footer style="height:150px;"></footer>
