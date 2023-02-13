@@ -17,6 +17,15 @@ from display.models import Work, Work_project
 # Create your views here.
 
 
+def double_project2(request, pk):
+    work_project = Work_project.objects.get(id=pk)
+    context = {
+        "work_project": work_project
+    }
+    return render(request, "projects2.html",
+                    {"context": context})
+
+
 def double_project(request):
     work_project = Work_project.objects.all()
     personal_project = Project.objects.all()
