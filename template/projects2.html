@@ -12,22 +12,62 @@
 
 
 <div class="context" style="width: 48%;">
-
-
     <div class="about" style="margin:auto;max-width:590px;font-size:15.1px;">
 
         <h5 style="font-weight: bold;">{{ context.work_project.title }}</h5>
             <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
         
+        <p style="white-space: pre-line;"><span> Date - End Date:</span> {{ context.work_project.date }} - {{ context.work_project.end_date }}
+    <span style="font-weight: bold;">Production:</span> <a class="plink" target="_blank" href="{{ context.work_project.url }}">{{ context.work_project.url }}</a>
+    <span style="font-weight: bold;">UAT:</span> <a class="plink" target="_blank" href="{{ context.work_project.uat_url }}">{{ context.work_project.uat_url }}</a>
+        </p>
+
+
+
+        <div style="display: block;">
+            <div style="margin-bottom: 35px;">
+                <p>{{ context.work_project.description }}</p>
+                <p>Uses: <span style="font-weight: bold;">{{ context.work_project.tech }}</span></p>
+                </div>
+
+
+            <div class="">
+            {% if context.work_project.image1 %}
+                <img src="{{ context.work_project.image1.url }}" alt="" style="
+                width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+            {% endif %}
+
+            {% if context.work_project.image2 %}
+                <img src="{{ context.work_project.image2.url }}" alt="" style="
+                width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+            {% endif %}
+
+            {% if context.work_project.image3 %}
+                <img src="{{ context.work_project.image3.url }}" alt="" style="
+                width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+            {% endif %}
+
+            {% if context.work_project.image4 %}
+                <img src="{{ context.work_project.image4.url }}" alt="" style="
+                width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+            {% endif %}
+
+            {% if context.work_project.image5 %}
+                <img src="{{ context.work_project.image5.url }}" alt="" style="
+                width: 270px; height:130px;margin-left: 15px;margin-bottom: 15px;">
+            {% endif %}
+                </div>
+
+        </div>
 
 
 
 
     </div>
-
-    
 </div>
 
 
+
+<footer style="height:150px;"></footer>
 
 {% endblock %}
