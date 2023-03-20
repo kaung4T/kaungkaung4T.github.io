@@ -21,7 +21,7 @@ class WorkProjectAdmin(admin.ModelAdmin):
 
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url", "work", "work_url"]
+    list_display = ["about", "conclusion", "dob", "nation", "phone", "profession", "email", "github", "leet", "linked", "graduate", "nation_url", "work", "work_url", "facebook"]
 
 
 class SkillAdmin(admin.ModelAdmin):
