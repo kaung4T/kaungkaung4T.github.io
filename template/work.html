@@ -17,14 +17,19 @@
 
 
     <div class="about" style="margin:auto;max-width:590px;font-size:15.1px;">
+                
+
+
+        
+        
+    <div class="work_group">
                 {% for works in context.work %}
 
-                
                 <h5 style="font-weight: bold;">{{ works.title }}</h5>
                 <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
 
 
-    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {{ works.end_date }}
+    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {% if works.end_date %}{{ works.end_date }} {% else %} <span id="work_today"></span> {% endif %}     
     <span style="font-weight: bold;">Role:</span> {{ works.role }}
     </p>
               <br>  
@@ -54,7 +59,11 @@
     <span style="font-weight: bold;">Location: </span><a class="plink" target="_blank" href="{{ works.location }}">Myanmar, Bahan Sayar San, Yangon</a>
 </p>
                     <br>
+                
                 {% endfor %}
+    </div>
+
+
 
 
                 
@@ -98,6 +107,8 @@
 
 </div>
 
+
+<script src="{% static 'still_work.js' %}"></script>
 
 
 <footer style="height:150px;"></footer>
