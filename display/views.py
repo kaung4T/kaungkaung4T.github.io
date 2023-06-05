@@ -27,7 +27,7 @@ def double_project2(request, pk):
 
 
 def double_project(request):
-    work_project = Work_project.objects.all()
+    work_project = Work_project.objects.all().order_by('-id')
     personal_project = Project.objects.all()
     context = {
         "work_project": work_project,
@@ -39,7 +39,7 @@ def double_project(request):
 
 def work(request):
     work = Work.objects.all()
-    work_project = Work_project.objects.all()
+    work_project = Work_project.objects.all().order_by('-id')
 
     context = {
         "work": work,
