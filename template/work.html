@@ -73,6 +73,7 @@
 
                 {% for work_projects in context.work_project %}
 
+    <div class="work_project_group">
                 <h5 style="font-weight: bold;">{{ work_projects.title}}</h5>
                 <legend class="border-bottom border-dark mb-1" style=""></legend>
 
@@ -92,12 +93,12 @@
     
         
         <div>
-            {{ work_projects.description|truncatewords:35 }} <span class="plink">More</span>
+            <p>{{ work_projects.description|truncatewords:35 }} <span class="plink">More</span></p> 
         </div>
     </div>
 </a>
 
-<div style="height: 80px;"></div>
+</div>
                 {% endfor %}
 
 
