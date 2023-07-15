@@ -142,7 +142,7 @@ MEDIA_URL = '/media/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = config('MAIL_BACKEND')
 EMAIL_HOST = config('MAIL_HOST')
 EMAIL_USE_TLS = True
 EMAIL_PORT = config('MAIL_PORT')
