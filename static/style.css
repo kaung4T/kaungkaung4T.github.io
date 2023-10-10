@@ -241,7 +241,7 @@ animation-iteration-count: infinite;
 
 @keyframes slidein {
   from {
-    margin-left: -80px;
+    margin-left: -140px;
     width: 150px;
   }
 
