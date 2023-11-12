@@ -1,4 +1,4 @@
 {
     "workbench.editor.wrapTabs": true,
-    "zenMode.hideTabs": true
+    "zenMode.showTabs": "single"
 }
