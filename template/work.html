@@ -29,7 +29,7 @@
                 <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
 
 
-    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {% if works.end_date %}{{ works.end_date }} {% else %} <span id="work_today"></span> {% endif %}     
+    <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {% if works.end_date %} {{ works.end_date }} {% else %} <span>Present</span> {% endif %}     
     <span style="font-weight: bold;">Role:</span> {{ works.role }}
     </p>
               <br>  
@@ -55,8 +55,8 @@
                         </p>
                         </div>
                         
-<p style="white-space: pre-line;"><span style="font-weight: bold;">Company-Page: </span><a class="plink" target="_blank" href="{{ works.url }}">CUBE Design & SNI</a>
-    <span style="font-weight: bold;">Location: </span><a class="plink" target="_blank" href="{{ works.location }}">Myanmar, Bahan Sayar San, Yangon</a>
+<p style="white-space: pre-line;"><span style="font-weight: bold;">Company-Page: </span><a class="plink" target="_blank" href="{{ works.url }}">{{ works.title }}</a>
+    <span style="font-weight: bold;">Based: </span><a class="plink" target="_blank" href="{{ works.location }}">{{ works.address }}</a>
 </p>
                     <br>
                 

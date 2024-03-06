@@ -10,6 +10,7 @@ class Profile(AbstractUser):
 class Work(models.Model):
     user = models.ForeignKey(Profile, default=None, on_delete=models.CASCADE)
     title = models.CharField(max_length=225, null=True, blank=True)
+    address = models.CharField(max_length=225, null=True, blank=True)
     role = models.CharField(max_length=255, null=True, blank=True)
     description = models.TextField(null=True, blank=True)
     tech = models.CharField(max_length=255, null=True, blank=True)

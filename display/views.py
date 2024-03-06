@@ -27,8 +27,8 @@ def double_project2(request, pk):
 
 
 def double_project(request):
-    # work_project = Work_project.objects.all().order_by('-id')
-    work_project = Work_project.objects.all()
+    work_project = Work_project.objects.all().order_by('-id')
+    # work_project = Work_project.objects.all()
     personal_project = Project.objects.all()
     context = {
         "work_project": work_project,
@@ -39,9 +39,9 @@ def double_project(request):
 
 
 def work(request):
-    work = Work.objects.all()
-    # work_project = Work_project.objects.all().order_by('-id')
-    work_project = Work_project.objects.all()
+    work = Work.objects.all().order_by('-id')
+    work_project = Work_project.objects.all().order_by('-id')
+    # work_project = Work_project.objects.all()
 
     context = {
         "work": work,
@@ -54,6 +54,7 @@ def work(request):
 
 def home(request):
     about = About.objects.all()
+    work = Work.objects.all().order_by('-id')
     if request.method == "POST":
         email = request.POST["email"]
         title = request.POST["title"]
@@ -70,7 +71,7 @@ def home(request):
         return redirect("/")
 
     return render(request, "index.html",
-                 {"About":about})
+                 {"About":about, "Work": work})
 
 
 def profile(request):
