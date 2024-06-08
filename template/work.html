@@ -13,10 +13,10 @@
 
 
 
-<div class="context" style="width: 48%;">
+<div class="context" style="">
 
 
-    <div class="about" style="margin:auto;max-width:590px;font-size:15.1px;">
+    <div class="about" style="margin:auto;font-size:15.1px;">
                 
 
 
@@ -26,7 +26,7 @@
                 {% for works in context.work %}
 
                 <h5 style="font-weight: bold;">{{ works.title }}</h5>
-                <legend class="border-bottom border-dark mb-1" style="width:525px;"></legend>
+                <legend class="border-bottom border-dark mb-1" style=""></legend>
 
 
     <p style="white-space: pre-line;"><span style="font-weight: bold;">Start Date - End Date:</span>  {{ works.date }} - {% if works.end_date %} {{ works.end_date }} {% else %} <span>Present</span> {% endif %}     
